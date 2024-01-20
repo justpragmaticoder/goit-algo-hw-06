@@ -1,37 +1,11 @@
 We trying to compare behaviour of DFS and BFS algorithms on practice on Bratislava locations simulation.
 Below you will find a result of work for each algorithm.
 
-DFS_TREE paths from Hlavná Stanica to Avion Shopping Park:
-('Hlavná Stanica', 'Špitálska Street')
-('Špitálska Street', 'Starý Most')
-('Starý Most', 'Bratislava Castle')
-('Bratislava Castle', 'Main Square')
-('Main Square', 'Apollo Bridge')
-('Apollo Bridge', 'Petržalka')
-('Petržalka', 'Sad Janka Kráľa')
-('Sad Janka Kráľa', 'Incheba Expo')
-('Incheba Expo', 'Aupark')
-('Aupark', 'Eurovea')
-('Eurovea', 'Železná Studienka')
-('Železná Studienka', 'Slavín')
-('Slavín', 'Koliba')
-('Koliba', 'Avion Shopping Park')
+DFS path from Hlavná Stanica to Avion Shopping Park:
+ ['Hlavná Stanica', 'Bratislava Castle', 'Main Square', 'Apollo Bridge', 'Sad Janka Kráľa', 'Aupark', 'Eurovea', 'Slavín', 'Koliba', 'Avion Shopping Park']
 
-BFS_TREE paths from Hlavná Stanica to Avion Shopping Park:
-('Hlavná Stanica', 'Špitálska Street')
-('Hlavná Stanica', 'Main Square')
-('Hlavná Stanica', 'Bratislava Castle')
-('Hlavná Stanica', 'Koliba')
-('Špitálska Street', 'Starý Most')
-('Špitálska Street', 'Incheba Expo')
-('Main Square', 'Apollo Bridge')
-('Koliba', 'Eurovea')
-('Koliba', 'Slavín')
-('Koliba', 'Avion Shopping Park')
-('Incheba Expo', 'Sad Janka Kráľa')
-('Incheba Expo', 'Aupark')
-('Apollo Bridge', 'Petržalka')
-('Eurovea', 'Železná Studienka')
+BFS path from Hlavná Stanica to Avion Shopping Park:
+ ['Hlavná Stanica', 'Špitálska Street', 'Main Square', 'Bratislava Castle', 'Starý Most', 'Apollo Bridge', 'Petržalka', 'Sad Janka Kráľa', 'Aupark', 'Incheba Expo', 'Eurovea', 'Železná Studienka', 'Koliba', 'Slavín', 'Avion Shopping Park']
 
 
 Conclusion:

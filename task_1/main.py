@@ -26,29 +26,38 @@ edges = [
     ("Hlavná Stanica", "Bratislava Castle", 3),
     ("Špitálska Street", "Starý Most", 2),
     ("Špitálska Street", "Main Square", 2),
-    ("Špitálska Street", "Incheba Expo", 5),
     ("Starý Most", "Bratislava Castle", 3),
+    ("Starý Most", "Apollo Bridge", 3),
     ("Bratislava Castle", "Main Square", 2),
     ("Main Square", "Apollo Bridge", 5),
     ("Apollo Bridge", "Petržalka", 7),
     ("Apollo Bridge", "Sad Janka Kráľa", 5),
     ("Petržalka", "Sad Janka Kráľa", 5),
+    ("Petržalka", "Aupark", 4),
     ("Sad Janka Kráľa", "Incheba Expo", 2),
     ("Sad Janka Kráľa", "Eurovea", 4),
-    ("Incheba Expo", "Aupark", 2),
+    ("Incheba Expo", "Eurovea", 5),
     ("Aupark", "Eurovea", 3),
     ("Aupark", "Sad Janka Kráľa", 3),
-    ("Aupark", "Avion Shopping Park", 5),
     ("Eurovea", "Železná Studienka", 8),
     ("Eurovea", "Koliba", 6),
-    ("Železná Studienka", "Slavín", 6),
+    ("Eurovea", "Slavín", 4),
+    ("Železná Studienka", "Avion Shopping Park", 10),
+    ("Železná Studienka", "Koliba", 4),
     ("Slavín", "Koliba", 5),
     ("Koliba", "Avion Shopping Park", 7),
-    ("Koliba", "Slavín", 2),
-    ("Koliba", "Hlavná Stanica", 6),
 ]
 
 bratislava_transportation_graph = GraphBuilder(locations, edges)
 
+graph_characteristics = bratislava_transportation_graph.get_graph_characteristics()
+
+print("\nBratislava transportation graph characteristics:")
+print("Number of Vertices:", graph_characteristics["vertices_qty"])
+print("Number of Edges:", graph_characteristics["edges_qty"])
+print("Graph Density:", graph_characteristics["graph_density"])
+print("\nDegrees of Vertices:")
+for location, degree in graph_characteristics["degree_of_vertices"].items():
+    print(f"{location}: {degree} edges")
 
 bratislava_transportation_graph.draw_graph()

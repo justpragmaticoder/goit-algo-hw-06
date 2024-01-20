@@ -33,3 +33,18 @@ class GraphBuilder:
         nx.draw_networkx_edge_labels(self.graph, pos, edge_labels=labels)
 
         plt.show()
+
+    def get_graph_characteristics(self):
+        vertices_qty = len(self.graph.nodes())
+        edges_qty = len(self.graph.edges())
+        degree_of_vertices = dict(self.graph.degree())
+
+        max_possible_edges = vertices_qty * (vertices_qty - 1) / 2
+        graph_density = edges_qty / max_possible_edges
+
+        return {
+            "vertices_qty": vertices_qty,
+            "edges_qty": edges_qty,
+            "graph_density": graph_density,
+            "degree_of_vertices": degree_of_vertices,
+        }
